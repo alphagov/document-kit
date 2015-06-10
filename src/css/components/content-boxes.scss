@@ -1,0 +1,15 @@
+.content-box {
+  @extend .col-md-9;
+
+  margin-bottom: 20px;
+
+  > div {
+    background: rgba(255, 255, 255, 0.9);
+    color: $black;
+    padding: 10px 20px;
+  }
+
+  h2:first-of-type {
+    margin-top: 10px;
+  }
+}

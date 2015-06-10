@@ -1,0 +1,27 @@
+.title {
+  @extend .row;
+
+  background: $hm-government;
+  color: #fff;
+  height: 500px;
+  padding: 145px 30px;
+  position: relative;
+  max-height: 100%;
+
+  h1 {
+    font-size: 47px;
+    line-height: 1;
+    margin: 60px 0 0;
+  }
+  h2 {
+    font-size: 31px;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}

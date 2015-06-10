@@ -1,0 +1,88 @@
+.full-width-background {
+  background: no-repeat center top;
+  background-size: cover;
+}
+
+.section {
+  @extend .row;
+  @extend .full-width-background;
+
+  min-height: 400px;
+  padding-top: 15px;
+  padding-bottom: 0px;
+}
+
+section {
+  @extend .section;
+}
+
+section > h1 {
+  @extend .col-md-12;
+}
+
+a.section-id {
+  position: relative;
+  top: -90px;
+  display: block;
+}
+
+.section-inverted {
+  color: #fff;
+}
+
+.section, .subsection {
+  &.colour-discovery {
+    @extend .section-inverted;
+    background-color: $discovery-colour;
+  }
+  &.colour-alpha {
+    @extend .section-inverted;
+    background-color: $alpha-colour;
+  }
+  &.colour-beta {
+    @extend .section-inverted;
+    background-color: $beta-colour;
+  }
+  &.colour-live {
+    @extend .section-inverted;
+    background-color: $live-colour;
+  }
+  &.colour-black {
+    @extend .section-inverted;
+    background-color: $black;
+  }
+  &.colour-yellow {
+    background-color: $yellow;
+  }
+  &.colour-pink {
+    @extend .section-inverted;
+    background-color: $pink;
+  }
+  &.colour-turquoise {
+    @extend .section-inverted;
+    background-color: $turquoise;
+  }
+}
+
+.introduction {
+  @extend .col-md-9;
+  font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.subsection {
+  @extend .col-md-12;
+  @extend .full-width-background;
+
+  clear: left;
+  color: $black;
+  background-color: $white;
+  padding: 10px 0 0;
+  margin: 0;
+
+  > h1, > h2, > h3 {
+    padding-left: 15px;
+    font-size: 27px;
+  }
+}

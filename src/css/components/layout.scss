@@ -1,0 +1,10 @@
+.document-container {
+  @extend .container-fluid;
+}
+
+.media-item {
+  h3 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
