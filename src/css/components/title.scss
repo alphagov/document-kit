@@ -8,6 +8,10 @@
   position: relative;
   max-height: 100%;
 
+  @media (max-width: 992px) {
+    padding-left: 20px;
+  }
+
   h1 {
     font-size: 47px;
     line-height: 1;
@@ -23,5 +27,10 @@
     position: absolute;
     top: 30px;
     right: 30px;
+
+    @media (max-width: 992px) {
+      left: 20px;
+      right: auto;
+    }
   }
 }
