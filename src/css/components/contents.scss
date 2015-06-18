@@ -9,6 +9,10 @@
     height: auto;
     padding-bottom: 0;
   }
+  @media print {
+    height: auto;
+    padding-bottom: 0;
+  }
 
   ol {
     padding: 0;
@@ -91,5 +95,14 @@
     top: 0;
     background: #fff;
     z-index: 1;
+  }
+}
+@media print {
+  .with-fixed-contents .contents-stub, .slider {
+    display: none !important;
+  }
+
+  .with-fixed-contents .contents {
+    position: static !important;
   }
 }

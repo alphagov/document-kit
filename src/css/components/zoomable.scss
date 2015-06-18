@@ -1,0 +1,54 @@
+.zoomable-container {
+  background: #ddd;
+  width: 100%;
+  min-height: 100%;
+  display: block;
+  overflow: hidden;
+}
+.zoomable-item {
+  box-shadow: #ccc 2px 2px 2px;
+
+  width: 60%;
+  margin: 10px auto;
+
+  @media print {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.zoomable-controls {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 50px;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  @media print {
+    display: none;
+  }
+
+  button {
+    float: left;
+    clear: left;
+
+    background: #fff;
+    color: #000;
+    border: none;
+    font-size: 25px;
+    border-radius: 4px;
+    min-width: 40px;
+    margin: 4px;
+    line-height: 1;
+    padding-top: 8px;
+
+    &:hover {
+      background: #ccc;
+    }
+  }
+}
