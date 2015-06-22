@@ -6,15 +6,14 @@
     this.$el = options.$el;
     this.$container = $("<div></div>").addClass('zoomable-container');
     this.$zoomableItem = $("<div></div>").addClass('zoomable-item');
+    this.$previewEl = $("<div></div>").addClass('zoomable-preview');
     this.$controls = null;
 
-    this.insertControls();
-    this.initializePanzoom();
-    this.bindEvents();
+    this.insertContainer();
+    this.setupPreview();
   }
 
-  Zoomable.prototype.insertControls = function insertControls() {
-    /* Insert container */
+  Zoomable.prototype.insertContainer = function insertContainer() {
     this.$container.insertBefore(this.$el);
     this.$container.height(($(window).height() * 0.8));
 
@@ -22,7 +21,25 @@
 
     /* Wrap in zoomable-item element */
     this.$el.detach().appendTo(this.$zoomableItem);
+  }
 
+  Zoomable.prototype.setupPreview = function setupPreview() {
+    this.$container.addClass('with-preview');
+    this.$container.prepend(this.$previewEl);
+
+    this.$previewEl.on('click', $.proxy(this.initializeZoom, this));
+  }
+
+  Zoomable.prototype.initializeZoom = function initializeZoom() {
+    this.$previewEl.remove();
+    this.$container.removeClass('with-preview');
+
+    this.insertControls();
+    this.initializePanzoom();
+    this.bindEvents();
+  }
+
+  Zoomable.prototype.insertControls = function insertControls() {
     this.$controls = this.buildControls();
     this.$controls.appendTo(this.$container);
   }
