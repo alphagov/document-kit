@@ -8,7 +8,8 @@ in mind.
 
 ## Example
 
-Take a look at the `examples/` directory for a working example.
+Take a look at the `examples/` directory for a working example - a copy is
+hosted [on GitHub Pages](http://alphagov.github.io/document-kit/).
 
 ## Building from source
 
