@@ -5,9 +5,17 @@
   margin-top: 5px;
   margin-bottom: 5px;
 
+  @media print {
+    @include remove-side-padding;
+  }
+
   > div {
     background: #fff;
     padding: 5px 20px;
+
+    @media print {
+      @include remove-side-padding;
+    }
   }
 
   &:last-of-type {

@@ -12,4 +12,12 @@
   h2:first-of-type {
     margin-top: 10px;
   }
+
+  @media print {
+    @include remove-side-padding;
+
+    > div {
+      padding: 0;
+    }
+  }
 }

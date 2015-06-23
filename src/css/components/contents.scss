@@ -12,6 +12,13 @@
   @media print {
     height: auto;
     padding-bottom: 0;
+
+    &:before {
+      content: "Contents:";
+      font-size: 21px;
+      font-weight: bold;
+      margin: 0 0 10px;
+    }
   }
 
   ol {
@@ -19,6 +26,10 @@
     margin: 0;
     border-bottom: 4px solid $grey-2;
     overflow: auto;
+
+    @media print {
+      border-bottom: none;
+    }
 
     li {
       @extend .col-md-2;
@@ -34,10 +45,18 @@
         @media (max-width: 992px) {
           height: auto;
         }
+        @media print {
+          padding: 0 0 5px;
+          height: auto;
+        }
 
         &:hover {
           background: $grey-3;
           text-decoration: none;
+
+          @media print {
+            background: none;
+          }
         }
 
         h2 {
@@ -45,6 +64,10 @@
         }
         p {
           color: $grey-1;
+
+          @media print {
+            margin: 3px 0 0 40px;
+          }
         }
       }
 

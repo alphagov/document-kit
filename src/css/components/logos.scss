@@ -1,12 +1,31 @@
-.logo {
+@mixin logo($inverted) {
   display: inline-block;
-  background: url('images/rcoa.png') no-repeat 10px 0;
-  border-left: 3px solid #fff;
+  background: no-repeat 10px 0;
+  border-left: 3px solid;
+
   font-family: Helvetica, Arial, sans-serif;
   line-height: 30px;
   font-size: 23px;
   font-weight: normal;
   padding: 30px 0 0 10px;
+
+  @if $inverted == true {
+    background-image: url('images/rcoa-inverted.png');
+    border-color: #fff;
+    color: #fff;
+  } @else {
+    background-image: url('images/rcoa.png');
+    border-color: #000;
+    color: #000;
+  }
+}
+
+.logo {
+  @include logo($inverted: false);
+
+  &.logo-inverted {
+    @include logo($inverted: true);
+  }
 }
 .logo span {
   position: relative;

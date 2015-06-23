@@ -3,8 +3,14 @@
 }
 
 .media-item {
+  page-break-inside: avoid;
+
   h3 {
     padding-left: 15px;
     padding-right: 15px;
+
+    @media print {
+      @include remove-side-padding;
+    }
   }
 }

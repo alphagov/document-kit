@@ -5,6 +5,13 @@
   display: block;
   overflow: hidden;
   position: relative;
+
+  @media print {
+    height: auto !important;
+    overflow: auto;
+    min-height: 0;
+    position: static;
+  }
 }
 .zoomable-preview {
   position: absolute;
@@ -15,6 +22,10 @@
 
   cursor: -webkit-zoom-in;
   cursor: zoom-in;
+
+  @media print {
+    display: none;
+  }
 
   &:hover {
     background: rgba(255, 255, 255, 0.6);

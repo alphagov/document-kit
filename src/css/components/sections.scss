@@ -1,6 +1,10 @@
 .full-width-background {
   background: no-repeat center top;
   background-size: cover;
+
+  @media print {
+    background: none !important;
+  }
 }
 
 .section {
@@ -18,6 +22,10 @@ section {
 
 section > h1 {
   @extend .col-md-12;
+
+  @media print {
+    @include remove-side-padding;
+  }
 }
 
 a.section-id {
@@ -69,6 +77,10 @@ a.section-id {
   font-size: 19px;
   margin-top: 0;
   margin-bottom: 10px;
+
+  @media print {
+    @include remove-side-padding;
+  }
 }
 
 .subsection {
@@ -84,5 +96,9 @@ a.section-id {
   > h1, > h2, > h3 {
     padding-left: 15px;
     font-size: 27px;
+
+    @media print {
+      @include remove-side-padding;
+    }
   }
 }
