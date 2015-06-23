@@ -3,18 +3,37 @@ body {
   font-size: 17px;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+
+  @media print {
+    font-size: 12px;
+  }
 }
 
 h1 {
   font-size: 33px;
   font-weight: bold;
   margin: 13px 0;
+
+  @media print {
+    font-size: 25px;
+    margin: 8px 0;
+  }
 }
 h2 {
   font-size: 19px;
   font-weight: bold;
   margin: 25px 0 10px;
+
+  @media print {
+    font-size: 15px;
+    margin: 15px 0 7px;
+  }
 }
 p {
   margin: 9px 0;
+  text-align: justify;
+
+  @media print {
+    margin: 5px 0;
+  }
 }

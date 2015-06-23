@@ -28,12 +28,17 @@
 
     @media print {
       margin: 0 auto;
+      font-size: 35px;
     }
   }
   h2 {
     font-size: 31px;
     margin: 0;
     font-weight: normal;
+
+    @media print {
+      font-size: 23px;
+    }
   }
 
   .logo {

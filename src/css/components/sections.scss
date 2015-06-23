@@ -36,6 +36,10 @@ a.section-id {
 
 .section-inverted {
   color: #fff;
+
+  @media print {
+    color: #000;
+  }
 }
 
 .section, .subsection {
@@ -80,6 +84,7 @@ a.section-id {
 
   @media print {
     @include remove-side-padding;
+    font-size: 16px;
   }
 }
 
@@ -99,6 +104,7 @@ a.section-id {
 
     @media print {
       @include remove-side-padding;
+      font-size: 19px;
     }
   }
 }

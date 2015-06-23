@@ -15,7 +15,7 @@
 
     &:before {
       content: "Contents:";
-      font-size: 21px;
+      font-size: 17px;
       font-weight: bold;
       margin: 0 0 10px;
     }
@@ -75,11 +75,19 @@
         margin: 0 0 2px;
         font-size: 15px;
         line-height: 1;
+
+        @media print {
+          font-size: 13px;
+        }
       }
       p {
         margin: 0;
         font-size: 12px;
         line-height: 1;
+
+        @media print {
+          font-size: 11px;
+        }
       }
     }
   }
